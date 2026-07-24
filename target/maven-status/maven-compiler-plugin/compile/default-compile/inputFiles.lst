@@ -1,0 +1,12 @@
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\autoconfigure\TestDataGeneratorAutoConfiguration.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\config\TestDataGeneratorProperties.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\core\ColumnMetadata.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\core\GeneratedRow.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\core\TableMetadataReader.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\core\TestDataSet.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\generator\OracleValueGenerator.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\generator\ValueGenerator.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\output\DbInserter.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\output\SqlScriptExporter.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\override\ColumnOverride.java
+C:\Users\dawid\.copilot\repos\copilot-worktrees\test-data-generator\ga1ile0-sturdy-enigma\src\main\java\com\yourcompany\testdata\TestDataGenerator.java

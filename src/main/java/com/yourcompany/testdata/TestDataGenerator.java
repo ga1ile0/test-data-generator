@@ -53,11 +53,11 @@ public class TestDataGenerator {
      * @param tableName target Oracle table name
      * @return a fluent builder ready for further configuration
      */
-    public TestDataSet.Builder forTable(String tableName) {
-        return new TestDataSet.Builder()
-                .table(tableName)
+    public TestDataSet.TestDataSetBuilder forTable(String tableName) {
+        return TestDataSet.builder()
+                .tableName(tableName)
                 .reader(metadataReader)
-                .generator(valueGenerator);
+                .valueGenerator(valueGenerator);
     }
 
     /**

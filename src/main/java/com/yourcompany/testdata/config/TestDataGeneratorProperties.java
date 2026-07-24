@@ -1,5 +1,7 @@
 package com.yourcompany.testdata.config;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -7,16 +9,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * Prefix: {@code testdata.generator}.
  */
 @ConfigurationProperties(prefix = "testdata.generator")
+@Getter
+@Setter
 public class TestDataGeneratorProperties {
 
     /** Optional default Oracle schema to use when none is explicitly specified. */
     private String defaultSchema;
-
-    public String getDefaultSchema() {
-        return defaultSchema;
-    }
-
-    public void setDefaultSchema(String defaultSchema) {
-        this.defaultSchema = defaultSchema;
-    }
 }

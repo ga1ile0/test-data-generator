@@ -16,15 +16,17 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Exports generated rows as Oracle-compatible SQL INSERT statements to a file.
- * Stateless: safe for use as a singleton in concurrent environments.
+ * Static utility for exporting generated rows as Oracle-compatible SQL INSERT statements.
+ * Thread-safe: no shared mutable state.
  */
-public class SqlScriptExporter {
+public final class SqlScriptExporter {
 
     private static final DateTimeFormatter DATE_FMT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private static final DateTimeFormatter TS_FMT =
             DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+
+    private SqlScriptExporter() {}
 
     /**
      * Writes Oracle INSERT statements for all rows to {@code outputPath}.
@@ -37,9 +39,9 @@ public class SqlScriptExporter {
      * @param outputPath destination file path
      * @throws IOException if the file cannot be written
      */
-    public void export(String schema, String tableName,
-                       List<GeneratedRow> rows, List<ColumnMetadata> columns,
-                       Path outputPath) throws IOException {
+    public static void export(String schema, String tableName,
+                              List<GeneratedRow> rows, List<ColumnMetadata> columns,
+                              Path outputPath) throws IOException {
         String tableRef = schema != null ? schema + "." + tableName : tableName;
         String colList = columns.stream()
                 .map(ColumnMetadata::columnName)
@@ -59,7 +61,7 @@ public class SqlScriptExporter {
                 StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
-    private String toLiteral(Object value) {
+    private static String toLiteral(Object value) {
         if (value == null) {
             return "NULL";
         }

@@ -39,9 +39,9 @@ public class OracleValueGenerator implements ValueGenerator {
             case Types.FLOAT, Types.REAL, Types.DOUBLE ->
                     faker.number().randomDouble(4, -9999999, 9999999);
             case Types.DATE ->
-                    new java.sql.Date(faker.date().past(365 * 5, TimeUnit.DAYS).getTime());
+                    new java.sql.Date(faker.timeAndDate().past(365L * 5, TimeUnit.DAYS).toEpochMilli());
             case Types.TIMESTAMP, Types.TIMESTAMP_WITH_TIMEZONE ->
-                    new java.sql.Timestamp(faker.date().past(365 * 5, TimeUnit.DAYS).getTime());
+                    new java.sql.Timestamp(faker.timeAndDate().past(365L * 5, TimeUnit.DAYS).toEpochMilli());
             case Types.CLOB, Types.NCLOB, Types.LONGVARCHAR, Types.LONGNVARCHAR ->
                     faker.lorem().paragraph(2);
             case Types.BLOB, Types.BINARY, Types.VARBINARY -> {
